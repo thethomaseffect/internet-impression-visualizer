@@ -74,29 +74,3 @@ The problem with designing for maximum scalability is that hard-coding stopping 
  * All the words returned for a search term are the same (ie. the same 30 or so keep cropping up).
  * None of the links score sufficiently high enough to be considered candidates for the links queue.
 For large word targets (ie. 100000) this can cause the program to run out of links and hang. The code to handle these cases would certainly be worthy of it's own class. My proposed solution would be to detect when no new words have been added for a substantial amount of time, then examine the state of the links and page queue. This class could then potentially inject results 11 - 20 of the bing search into the links queue to get things moving again, or give up and form a cloud out of what's been found.
-
-# Licence
-
-Licenced under the MIT licence.
-
-The MIT License (MIT)
-
-Copyright (c) 2013 Thomas Geraghty
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
